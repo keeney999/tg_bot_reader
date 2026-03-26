@@ -55,7 +55,9 @@ async def handle_photo(message: Message, bot:Bot, state: FSMContext):
         barcodes=barcodes,
         message_link=f"https://t.me/c/{message.chat.id}/{message.message_id}?thread={message.message_thread_id}"
     )
+    logger.info("Attempting to append to sheet...")
     append_to_sheet(scan_result)
+    logger.info("Append successful")
     logger.info(f"Processed photo from {message.from_user.id}")
 
     # 5. Завершаем состояние

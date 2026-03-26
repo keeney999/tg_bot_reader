@@ -4,6 +4,7 @@ from google.oauth2.service_account import Credentials
 from src.config import GOOGLE_CREDENTIALS_JSON, SHEET_ID, SHEET_NAME
 from src.models.schemas import ScanResult
 from datetime import datetime
+from src.utils.logger import logger
 
 def get_sheet():
     # Преобразуем JSON-строку в словарь
@@ -14,6 +15,7 @@ def get_sheet():
     )
     client = gspread.authorize(creds)
     sheet = client.open_by_key(SHEET_ID).worksheet(SHEET_NAME)
+    logger.info(f"Connected to sheet: {sheet.title}, ID: {sheet.id}")
     return sheet
 
 def append_to_sheet(result: ScanResult):
@@ -31,6 +33,7 @@ def append_to_sheet(result: ScanResult):
                 result.message_link
             ]
             sheet.append_row(row, value_input_option='USER_ENTERED')
+            logger.info(f"Appended row: {row}")
     else:
         row = [
             timestamp,
