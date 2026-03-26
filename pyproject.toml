@@ -6,11 +6,29 @@ authors = [
     {name = "Keeney",email = "keeney.cooperation@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.12,<3.15"
+packages = [{include = "src"}]
 dependencies = [
+    "aiogram (>=3.25.0,<4.0.0)",
+    "python-dotenv (>=1.0,<2.0)",
+    "opencv-python (>=4.10.0,<5.0.0)",
+    "pytesseract (>=0.3.13,<0.4.0)",
+    "gspread (>=6.1,<7.0)",
+    "google-auth (>=2.29,<3.0)",
+    "pydantic (>=2.7,<3.0)",
+    "pillow (>=10.3,<11.0)",
 ]
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pre-commit (>=4.0,<5.0)",
+    "black (>=24.0,<25.0)",
+    "flake8 (>=7.0,<8.0)",
+    "isort (>=5.13,<6.0)",
+    "mypy (>=1.10,<2.0)"
+]
