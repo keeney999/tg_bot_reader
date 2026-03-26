@@ -17,6 +17,7 @@ dependencies = [
     "google-auth (>=2.29,<3.0)",
     "pydantic (>=2.7,<3.0)",
     "pillow (>=10.3,<11.0)",
+    "opencv-contrib-python (>=4.13.0.92,<5.0.0.0)",
 ]
 
 
