@@ -1,0 +1,38 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyInterpreterInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="httpx" />
+          <option value="beautifulsoup4" />
+          <option value="celery" />
+          <option value="pytest" />
+          <option value="pytest-asyncio" />
+          <option value="pytest-cov" />
+          <option value="pytest-freezegun" />
+          <option value="pytest-mock" />
+          <option value="pytest-docker" />
+          <option value="factory-boy" />
+          <option value="faker" />
+          <option value="isort" />
+          <option value="flake8-bugbear" />
+          <option value="flake8-comprehensions" />
+          <option value="mypy" />
+          <option value="pre-commit" />
+          <option value="docker" />
+          <option value="python-on-whales" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="FastAPI" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="UnsatisfiedRequirementInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>

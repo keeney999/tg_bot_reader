@@ -1,0 +1,16 @@
+[project]
+name = "tg-bot-reader"
+version = "0.1.0"
+description = "Telegram bot for barcode and order number recognition with Google Sheets logging"
+authors = [
+    {name = "Keeney",email = "keeney.cooperation@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
